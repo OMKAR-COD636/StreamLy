@@ -26,11 +26,14 @@ void plot(vector<vector<int>>&v,int color){
 }
 
 int main(){
+
     vector<vector<int>>v={
         {100,200},
         {100,100},
         {200,100}
     };
+    int gd=DETECT,gm;
+    initgraph(&gd,&gm,(char*)" ");
     plot(v,WHITE);
     vector<vector<int>>t(v),r(v),sc(v),sh(v);
     float r1=30*acos(-1.0)/180;
