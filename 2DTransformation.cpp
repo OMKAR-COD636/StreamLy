@@ -26,7 +26,6 @@ void plot(vector<vector<int>>&v,int color){
 }
 
 int main(){
-
     vector<vector<int>>v={
         {100,200},
         {100,100},
