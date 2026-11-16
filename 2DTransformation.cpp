@@ -6,7 +6,7 @@ using namespace std;
 void Transform2D(int tx,int ty,int r,int sx,int sy,int shx,int shy,
     vector<vector<int>>&t,vector<vector<int>>&r1,vector<vector<int>>&s,vector<vector<int>>&sh){
     for(int i=0;i<3;i++){
-        int x=r1[i][0],y=r1[i][1];
+        int x=v[i][0],y=v[i][1];
         t[i][0]+=tx;
         t[i][1]+=ty;
         r1[i][0]=x*cos(r)-y*sin(r);
@@ -14,7 +14,7 @@ void Transform2D(int tx,int ty,int r,int sx,int sy,int shx,int shy,
         s[i][0]*=sx;
         s[i][1]*=sy;
         sh[i][0]=x+shx*y;
-        sh[i][1]=y+shx*x;
+        sh[i][1]=y+shy*x;
     }
 }
 
