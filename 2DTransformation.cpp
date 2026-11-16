@@ -41,8 +41,7 @@ int main(){
     plot(r,YELLOW);
     plot(sc,RED);
     plot(sh,BLUE);
-
-    
-
+    getch();
+    closegraph();
     return 0;
 }
