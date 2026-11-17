@@ -6,7 +6,7 @@ using namespace std;
 void Transform2D(int tx,int ty,int r,int sx,int sy,int shx,int shy,
     vector<vector<int>>&t,vector<vector<int>>&r1,vector<vector<int>>&s,vector<vector<int>>&sh){
     for(int i=0;i<3;i++){
-        int x=v[i][0],y=v[i][1];
+        int x=r1[i][0],y=r1[i][1];
         t[i][0]+=tx;
         t[i][1]+=ty;
         r1[i][0]=x*cos(r)-y*sin(r);
@@ -36,7 +36,7 @@ int main(){
     plot(v,WHITE);
     vector<vector<int>>t(v),r(v),sc(v),sh(v);
     float r1=30*acos(-1.0)/180;
-    Transform2D(10,10,r1,2,2,10,0,t,r,sc,sh);
+    Transform2D(10,10,r1,2,2,1,0,t,r,sc,sh);
     plot(t,GREEN);
     plot(r,YELLOW);
     plot(sc,RED);
